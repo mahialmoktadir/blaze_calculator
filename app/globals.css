@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFF8FB;
+    color: #542B3C;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark body {
+    background-color: #160B10;
+    color: #F7E8EF;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+@keyframes roseHeartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  18% {
+    transform: scale(1.1);
+  }
+  32% {
+    transform: scale(0.98);
+  }
+  48% {
+    transform: scale(1.06);
+  }
+  65% {
+    transform: scale(1);
+  }
+}
+
+.animate-heart-pulse {
+  animation: roseHeartPulse 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-heart-pulse {
+    animation: none;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #1A0E14 !important;
+  }
+
+  .print-card {
+    box-shadow: none !important;
+    border: 1px solid #E5C8D5 !important;
+    break-inside: avoid;
+  }
+}

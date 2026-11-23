@@ -1,0 +1,8 @@
+{
+  "name": "BLAZE CALCULATOR",
+  "description": "Discover your exact age, explore your connections, and uncover your compatibility — all in one elegant Rose Edition calculator platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
