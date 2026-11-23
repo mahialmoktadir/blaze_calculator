@@ -1,5 +1,7 @@
 # BLAZE CALCULATOR — Ultimate Edition
 
+**Website** https://blaze-calculator.ai.studio/
+
 **Numbers with a Touch of Love.**  
 A modern, privacy-first calculator platform combining an exact **Age Calculator**, a deterministic **Love Match Calculator**, and a transparent **Compatibility Calculator** in a cohesive Pink, Rose, and White design system with Light and Dark Rose modes.
 
